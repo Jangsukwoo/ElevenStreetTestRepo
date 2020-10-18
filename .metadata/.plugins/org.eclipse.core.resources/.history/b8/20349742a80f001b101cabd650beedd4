@@ -1,0 +1,64 @@
+package com.elevenst.model;
+
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "ProductSearchResponse")
+public class ProductRequestModel {
+	List<Product> productList;
+
+	public ProductRequestModel(List<Product> productList) {
+		this.productList = productList;
+	}
+	@XmlElementWrapper(name="Products")
+	@XmlElement(name="Product")
+	public List<Product> getProductList() {
+		return productList;
+	}
+
+	public void setProductList(List<Product> productList) {
+		this.productList = productList;
+	}
+	@XmlRootElement(name="Product")
+	static public class Product {
+		String ProductName;
+		String ImageUrl;
+		String ProductPrice;
+		
+		public Product(String ProductName, String ImageUrl, String ProductPrice) {
+			this.ProductName = ProductName;
+			this.ImageUrl = ImageUrl;
+			this.ProductPrice = ProductPrice;
+		}
+		public String getProductName() {
+			return ProductName;
+		}
+		public void setProductName(String ProductName) {
+			this.ProductName = ProductName;
+		}
+		public String getImageUrl() {
+			return ImageUrl;
+		}
+		public void setImageUrl(String ImageUrl) {
+			this.ImageUrl = ImageUrl;
+		}
+		public String getProductPrice() {
+			return ProductPrice;
+		}
+		public void setProductPrice(String ProductPrice) {
+			this.ProductPrice = ProductPrice;
+		}
+		@Override
+		public String toString() {
+			return "Product [ProductName=" + ProductName + ", ImageUrl=" + ImageUrl + ", ProductPrice=" + ProductPrice
+					+ "]";
+		}
+	}
+	@Override
+	public String toString() {
+		return "ProductRequestModel [productList=" + productList + "]";
+	}
+}

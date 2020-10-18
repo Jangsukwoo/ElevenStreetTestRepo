@@ -1,0 +1,7 @@
+package com.elevenst.vo;
+
+public class ProductVO {
+	String ProductName;
+	String ImageUrl;
+	String ProductPrice;
+}

@@ -1,0 +1,5 @@
+package com.elevenst.model;
+
+public class Product {
+
+}

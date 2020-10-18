@@ -1,0 +1,5 @@
+package com.elevenst.controller;
+
+public class ProductSearchController {
+
+}

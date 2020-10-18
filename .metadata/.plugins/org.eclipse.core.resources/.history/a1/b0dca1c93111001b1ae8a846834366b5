@@ -1,0 +1,35 @@
+package com.elevenst.model;
+
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import lombok.Data;
+
+@XmlRootElement(name = "ProductSearchResponse.")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class ProductRequestModel {
+	
+	private List<Product> Products;
+
+	public ProductRequestModel() {
+		super();
+	}
+	public ProductRequestModel(List<Product> products) {
+		this.products = productList;
+	}
+	
+	@XmlElementWrapper(name="Products")
+	@XmlElement(name="Product")
+	public List<Product> getProductList() {
+		return productList;
+	}
+
+	public void setProductList(List<Product> productList) {
+		this.productList = productList;
+	}
+}

@@ -1,0 +1,5 @@
+package com.elevenst.vo;
+
+public class ProductVO {
+	String Product;
+}

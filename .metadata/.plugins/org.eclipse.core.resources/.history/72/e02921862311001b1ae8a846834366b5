@@ -1,0 +1,49 @@
+package com.elevenst.model;
+
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import lombok.Data;
+@Data
+@XmlRootElement(name = "ProductSearchResponse")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Product {
+	@XmlElement(name="Product")
+	String ProductName;
+	@XmlElement(name="Product")
+	String ImageUrl;
+	@XmlElement(name="Product")
+	String ProductPrice;
+	
+	
+	
+	public Product() {
+	}
+	public Product(String productName, String imageUrl, String productPrice) {
+		ProductName = productName;
+		ImageUrl = imageUrl;
+		ProductPrice = productPrice;
+	}
+	public String getProductName() {
+		return ProductName;
+	}
+	public void setProductName(String productName) {
+		ProductName = productName;
+	}
+	public String getImageUrl() {
+		return ImageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		ImageUrl = imageUrl;
+	}
+	public String getProductPrice() {
+		return ProductPrice;
+	}
+	public void setProductPrice(String productPrice) {
+		ProductPrice = productPrice;
+	}
+	
+}
