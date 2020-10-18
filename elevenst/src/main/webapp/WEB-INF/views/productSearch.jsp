@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 </head>
 <body>
-<h1>주 옹 이 의 1 1 번 가 프 로 젝 트 시 간 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>
+<h1>T E S T</h1>
 <input type="text" id="lname" name="lname"><button>
 검색</button><br><br>
 

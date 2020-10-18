@@ -60,7 +60,7 @@ public class ProductSearchService {
     	
     	
     	List<Product> products = productSearchResponse.getProducts();
-    	//System.out.println(products.size());
+    	System.out.println(products.size());
         if (!CollectionUtils.isEmpty(products)) {
             for(Product product : products) {
             	System.out.println(product.toString());
